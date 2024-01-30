@@ -24,6 +24,7 @@ public class TestRadio {
         int actual = radio.getNumberCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldNumberCurrentRadioStationOverLimit() {
         Radio radio = new Radio();
@@ -70,6 +71,7 @@ public class TestRadio {
         int actual = radio.getNumberCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldPrevBelowLimit() {
         Radio radio = new Radio();
@@ -138,6 +140,7 @@ public class TestRadio {
         int actual = radio.getSoundVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDown() {
         Radio radio = new Radio();
@@ -161,8 +164,6 @@ public class TestRadio {
         int actual = radio.getSoundVolume();
         Assertions.assertEquals(expected, actual);
     }
-
-
 
 
 }
