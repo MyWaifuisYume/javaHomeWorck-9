@@ -83,6 +83,39 @@ public class TestRadio {
     }
 
     @Test
+    public void shouldSoundVolumeBelowLimit() {
+        Radio radio = new Radio();
+
+        radio.setSoundVolume(-4);
+
+        int expected = 0;
+        int actual = radio.getSoundVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSoundVolumeOverLimit() {
+        Radio radio = new Radio();
+
+        radio.setSoundVolume(150);
+
+        int expected = 0;
+        int actual = radio.getSoundVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSoundVolume() {
+        Radio radio = new Radio();
+
+        radio.setSoundVolume(40);
+
+        int expected = 40;
+        int actual = radio.getSoundVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldUp() {
         Radio radio = new Radio();
 
