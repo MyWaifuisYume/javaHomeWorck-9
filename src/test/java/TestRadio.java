@@ -155,7 +155,7 @@ public class TestRadio {
 
     @Test
     public void shouldDownBeloWLimit() {
-        Radio radio = new Radio(10git );
+        Radio radio = new Radio(10);
 
         radio.setSoundVolume(0);
         radio.down();
