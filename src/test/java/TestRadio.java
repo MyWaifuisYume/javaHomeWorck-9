@@ -5,7 +5,7 @@ public class TestRadio {
 
     @Test
     public void shouldNumberCurrentRadioStation() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setNumberCurrentRadioStation(4);
 
@@ -16,7 +16,7 @@ public class TestRadio {
 
     @Test
     public void shouldNumberCurrentRadioStationBelowLimit() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setNumberCurrentRadioStation(-1);
 
@@ -27,7 +27,7 @@ public class TestRadio {
 
     @Test
     public void shouldNumberCurrentRadioStationOverLimit() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setNumberCurrentRadioStation(11);
 
@@ -38,7 +38,7 @@ public class TestRadio {
 
     @Test
     public void shouldNext() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setNumberCurrentRadioStation(4);
         radio.next();
@@ -50,7 +50,7 @@ public class TestRadio {
 
     @Test
     public void shouldNextOverLimit() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setNumberCurrentRadioStation(9);
         radio.next();
@@ -62,7 +62,7 @@ public class TestRadio {
 
     @Test
     public void shouldPrev() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setNumberCurrentRadioStation(4);
         radio.prev();
@@ -74,7 +74,7 @@ public class TestRadio {
 
     @Test
     public void shouldPrevBelowLimit() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setNumberCurrentRadioStation(0);
         radio.prev();
@@ -86,7 +86,7 @@ public class TestRadio {
 
     @Test
     public void shouldSoundVolumeBelowLimit() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setSoundVolume(-4);
 
@@ -97,7 +97,7 @@ public class TestRadio {
 
     @Test
     public void shouldSoundVolumeOverLimit() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setSoundVolume(150);
 
@@ -108,7 +108,7 @@ public class TestRadio {
 
     @Test
     public void shouldSoundVolume() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setSoundVolume(40);
 
@@ -119,7 +119,7 @@ public class TestRadio {
 
     @Test
     public void shouldUp() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setSoundVolume(50);
         radio.up();
@@ -131,7 +131,7 @@ public class TestRadio {
 
     @Test
     public void shouldUpOverLimit() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setSoundVolume(100);
         radio.up();
@@ -143,7 +143,7 @@ public class TestRadio {
 
     @Test
     public void shouldDown() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setSoundVolume(50);
         radio.down();
@@ -155,7 +155,7 @@ public class TestRadio {
 
     @Test
     public void shouldDownBeloWLimit() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setSoundVolume(0);
         radio.down();
